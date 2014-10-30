@@ -10,6 +10,7 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bashrc vimrc vim zshrc oh-my-zsh"    # list of files/folders to symlink in homedir
 
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 ##########
 
 # create dotfiles_old in homedir
