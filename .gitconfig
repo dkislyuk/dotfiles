@@ -7,3 +7,5 @@
 [user]
 	email = dkislyuk@pinterest.com
 	name = Dmitry Kislyuk
+[core]
+	editor = vim

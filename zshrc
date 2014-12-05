@@ -108,5 +108,6 @@ export PATH=~/bin:$PATH
 # Don't share history between zshsessions
 setopt append_history no_inc_append_history no_share_history
 
+set -g update-environment "SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION"
 
 export PYTHONPATH=~/bin:$PYTHONPATH
