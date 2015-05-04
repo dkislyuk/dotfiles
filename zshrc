@@ -50,7 +50,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Machine specific config
-. localzshrc
+. ~/dotfiles/localzshrc
 
 # User configuration
 
