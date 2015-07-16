@@ -96,9 +96,13 @@ alias gco="git checkout"
 alias gb='git branch'
 alias gcm='git checkout master'
 alias ga='git commit -a --amend'
-alias grm='git rebase upstream/master'
-alias gp='git pull upstream master'
+alias grm='git rebase origin/master'
+alias gp='git pull origin master'
 alias gra='git reset --soft HEAD@{1}'
+
+alias sls='s4cmd ls'
+alias sg='s4cmd get'
+alias sp='s4cmd put'
 
 # Watcher
 alias watch='python ~/bin/keepwatching'
