@@ -4,6 +4,7 @@
 	changed-diff = ! git diff --diff-filter=ACMRTUX `git merge-base HEAD upstream/master`
 	pychanged = ! git changed | grep -v thrift | grep -v ttypes | egrep '.py$'
 	check = "! f() { echo '** pep8 **'; pep8 --show-source --max-line-length=120 $*; echo '** pyflakes **'; pyflakes $*; }; f $(git pychanged)"
+	sync = !git fetch upstream && git rebase upstream/master
 [user]
 	email = dkislyuk@pinterest.com
 	name = Dmitry Kislyuk

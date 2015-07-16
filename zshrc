@@ -49,6 +49,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Machine specific config
+. ~/dotfiles/localzshrc
+
 # User configuration
 
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
@@ -87,12 +90,13 @@ alias la='ls -a'
 alias gs='git status'
 alias gl='git log'
 alias gd='git diff'
+alias gsh='git show'
 alias gc='git commit -a -m'
-alias grim='gc "to be squashed commit" && git rebase -i master'
 alias gco="git checkout"
 alias gb='git branch'
 alias gcm='git checkout master'
 alias ga='git commit -a --amend'
+alias grm='git rebase upstream/master'
 alias gp='git pull upstream master'
 alias gra='git reset --soft HEAD@{1}'
 
@@ -111,3 +115,5 @@ setopt append_history no_inc_append_history no_share_history
 set -g update-environment "SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION"
 
 export PYTHONPATH=~/bin:$PYTHONPATH
+
+export MAVEN_OPTS="-Xmx512m" 
