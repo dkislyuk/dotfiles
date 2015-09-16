@@ -4,6 +4,8 @@
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 ########## Variables
 
 dir=~/dotfiles                    # dotfiles directory

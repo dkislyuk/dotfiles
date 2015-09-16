@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin":$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -99,10 +99,13 @@ alias ga='git commit -a --amend'
 alias grm='git rebase origin/master'
 alias gp='git pull origin master'
 alias gra='git reset --soft HEAD@{1}'
+alias gbdate='for k in `git branch | perl -pe '\''s/^..(.*?)( ->.*)?$/\1/'\''`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r'
 
 alias sl='s4cmd ls'
 alias sg='s4cmd get'
 alias sp='s4cmd put'
+
+alias size='du -sh *'
 
 # Watcher
 alias watch='python ~/bin/keepwatching'
