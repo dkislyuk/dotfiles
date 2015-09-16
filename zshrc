@@ -104,6 +104,8 @@ alias sl='s4cmd ls'
 alias sg='s4cmd get'
 alias sp='s4cmd put'
 
+alias size='du -sh *'
+
 # Watcher
 alias watch='python ~/bin/keepwatching'
 
