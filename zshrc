@@ -100,13 +100,16 @@ alias grm='git rebase origin/master'
 alias gp='git pull origin master'
 alias gra='git reset --soft HEAD@{1}'
 
-alias sls='s4cmd ls'
+alias sl='s4cmd ls'
 alias sg='s4cmd get'
 alias sp='s4cmd put'
+
+alias size='du -sh *'
 
 # Watcher
 alias watch='python ~/bin/keepwatching'
 
+alias venv='use_virtualenv'
 
 alias redshift="ssh hive@hive001"
 alias reload="source ~/.zshrc"
