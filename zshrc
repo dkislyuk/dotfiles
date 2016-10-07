@@ -49,9 +49,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Machine specific config
-. ~/dotfiles/localzshrc
-
 # User configuration
 
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
@@ -124,3 +121,8 @@ set -g update-environment "SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTIO
 export PYTHONPATH=~/bin:$PYTHONPATH
 
 export MAVEN_OPTS="-Xmx512m" 
+
+# Machine specific config
+. ~/dotfiles/localzshrc
+
+
