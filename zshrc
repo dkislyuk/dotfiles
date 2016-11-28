@@ -49,9 +49,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Machine specific config
-. ~/dotfiles/localzshrc
-
 # User configuration
 
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin":$PATH
@@ -93,13 +90,13 @@ alias gd='git diff'
 alias gsh='git show'
 alias gc='git commit -a -m'
 alias gco="git checkout"
-alias gb='git branch'
+alias gbr='git branch'
 alias gcm='git checkout master'
 alias ga='git commit -a --amend'
 alias grm='git rebase origin/master'
 alias gp='git pull origin master'
 alias gra='git reset --soft HEAD@{1}'
-alias gbdate='for k in `git branch | perl -pe '\''s/^..(.*?)( ->.*)?$/\1/'\''`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r'
+alias gb='for k in `git branch | perl -pe '\''s/^..(.*?)( ->.*)?$/\1/'\''`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r'
 
 alias sl='s4cmd ls'
 alias sg='s4cmd get'
@@ -125,3 +122,8 @@ set -g update-environment "SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTIO
 export PYTHONPATH=~/bin:$PYTHONPATH
 
 export MAVEN_OPTS="-Xmx512m" 
+
+# Machine specific config
+. ~/dotfiles/localzshrc
+
+
