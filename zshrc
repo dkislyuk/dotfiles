@@ -95,7 +95,9 @@ alias gcm='git checkout master'
 alias ga='git commit -a --amend'
 alias grm='git rebase origin/master'
 alias gp='git pull origin master'
+alias gsp='git submodule update --recursive'
 alias gra='git reset --soft HEAD@{1}'
+
 alias gb='for k in `git branch | perl -pe '\''s/^..(.*?)( ->.*)?$/\1/'\''`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r'
 
 alias sl='s4cmd ls'
