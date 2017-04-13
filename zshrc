@@ -48,13 +48,13 @@ ZSH_THEME="blinks"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(direnv hook zsh)"
 
 # User configuration
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
