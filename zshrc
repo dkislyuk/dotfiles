@@ -48,13 +48,16 @@ ZSH_THEME="blinks"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+
+source ~/dotfiles/localzshrc
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(direnv hook zsh)"
 
 # User configuration
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# sexport PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -129,7 +132,3 @@ export PYTHONPATH=~/bin:$PYTHONPATH
 
 export MAVEN_OPTS="-Xmx512m" 
 
-
-# Machine specific config
-# . ~/dotfiles/localzshrc
-source ~/dotfiles/localzshrc
