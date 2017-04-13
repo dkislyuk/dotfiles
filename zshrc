@@ -48,13 +48,18 @@ ZSH_THEME="blinks"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
 # Machine specific config
-. ~/dotfiles/localzshrc
+# . ~/dotfiles/localzshrc
+source ~/dotfiles/localzshrc
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(direnv hook zsh)"
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -124,3 +129,4 @@ set -g update-environment "SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTIO
 export PYTHONPATH=~/bin:$PYTHONPATH
 
 export MAVEN_OPTS="-Xmx512m" 
+
